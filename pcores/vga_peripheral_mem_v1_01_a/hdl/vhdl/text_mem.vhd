@@ -55,7 +55,7 @@ begin
     end if;
   end process;
   
-  DP_TEXT_MEM_WR : process(clk_i) begin
+  DP_TEXT_MEM_WR : process(wr_clk_i) begin
 	if(rising_edge(wr_clk_i)) then
 		if (we_i = '1') then
         text_mem(conv_integer(wr_addr_i)) <= wr_data_i; -- update img_mem from out_mem
