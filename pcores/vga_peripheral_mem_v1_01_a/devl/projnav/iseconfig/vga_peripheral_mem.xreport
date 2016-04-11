@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-04-07T13:59:54</DateModified>
+  <DateModified>2016-04-11T17:09:09</DateModified>
   <ModuleName>vga_peripheral_mem</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>C:/materija/RA151-2013/lab3/pcores/vga_peripheral_mem_v1_01_a/devl/projnav/iseconfig/vga_peripheral_mem.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/materija/RA151-2013/lab3/pcores/vga_peripheral_mem_v1_01_a/devl/projnav</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>C:/materija/RA151-2013/lab3/pcores/vga_peripheral_mem_v1_01_a/devl/projnav\</ImplementationReportsDirectory>
   <DateInitialized>2016-04-07T13:16:14</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

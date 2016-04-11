@@ -163,6 +163,7 @@ architecture IMP of user_logic is
       );
     port (
       clk_i               : in  std_logic;
+		wr_clk_i : in std_logic;
       reset_n_i           : in  std_logic;
       --
       direct_mode_i       : in  std_logic; -- 0 - text and graphics interface mode, 1 - direct mode (direct force RGB component)
@@ -242,6 +243,7 @@ architecture IMP of user_logic is
   signal tm_we : std_logic;
   signal gm_we : std_logic;
   signal reg_we : std_logic;
+  signal unit_data : std_logic_vector(31 downto 0);
 
   ------------------------------------------
   -- Signals for user logic slave model s/w accessible register example
@@ -337,6 +339,7 @@ begin
   )
   port map(
     clk_i              => clk_i,
+	 wr_clk_i => Bus2IP_Clk,
     reset_n_i          => reset_n_i,
     --
     direct_mode_i      => direct_mode,
@@ -682,13 +685,31 @@ begin
   --Bus2IP_Addr
   unit_id <= Bus2IP_Addr(24 to 25);
   unit_address <= Bus2IP_Addr(2 to 23);
+  unit_data <= Bus2IP_Data;
   
   tm_we <= '1' when unit_id = "01" else '0';
   gm_we <= '1' when unit_id = "10" else '0';
   reg_we <= '1' when unit_id = "00" else '0';
   
   pixel_address <= unit_address(17 downto 0);
-  char_address <= unit_address(5 downto 0);
+  pixel_value <= unit_data;
+  
+  char_address <= unit_address(11 downto 0);
+  char_value <= unit_data(5 downto 0);
+  
+  process(Bus2IP_Clk) begin
+  if(rising_edge(Bus2IP_Clk)) then
+	if(reg_we = '1') then
+		case unit_address is
+		when x"00000000" => direct_mode <= unit_data(0);
+		when x"00000001" => display_mode <= unit_data(1 downto 0);
+		
+		end case;
+	 end if;
+	end if;
+  end process;
+  
+  
   
   ------------------------------------------
   -- Example code to drive IP to Bus signals

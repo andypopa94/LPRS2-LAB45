@@ -15,10 +15,12 @@
     </HEADERS>
     <SPLITTERS COLLAPSIBLE="1" HANDLEWIDTH="4" MARKER="255" ORIENTATION="1" RESIZE="1" SIZES="180,450,200" VERSION="0"/>
     <STATUS>
-      <SELECTIONS/>
+      <SELECTIONS>
+        <VARIABLE ID="vga_peripheral_mem_0"/>
+      </SELECTIONS>
     </STATUS>
     <SEQUENCES IS_DEF_SEQUENCES="TRUE">
-      <VARIABLE ID="proc_sys_reset_0" ROW_INDEX="10"/>
+      <VARIABLE ID="proc_sys_reset_0" ROW_INDEX="11"/>
       <VARIABLE ID="microblaze_0_ilmb" ROW_INDEX="2"/>
       <VARIABLE ID="microblaze_0_i_bram_ctrl" ROW_INDEX="6"/>
       <VARIABLE ID="microblaze_0_dlmb" ROW_INDEX="1"/>
@@ -26,9 +28,10 @@
       <VARIABLE ID="microblaze_0_bram_block" ROW_INDEX="4"/>
       <VARIABLE ID="microblaze_0" ROW_INDEX="3"/>
       <VARIABLE ID="debug_module" ROW_INDEX="7"/>
-      <VARIABLE ID="clock_generator_0" ROW_INDEX="9"/>
+      <VARIABLE ID="clock_generator_0" ROW_INDEX="10"/>
       <VARIABLE ID="axi4lite_0" ROW_INDEX="0"/>
       <VARIABLE ID="RS232" ROW_INDEX="8"/>
+      <VARIABLE ID="vga_peripheral_mem_0" ROW_INDEX="9"/>
     </SEQUENCES>
   </SET>
 
@@ -108,6 +111,7 @@
       <VARIABLE ID="clock_generator_0" ROW_INDEX="10"/>
       <VARIABLE ID="axi4lite_0" ROW_INDEX="1"/>
       <VARIABLE ID="RS232" ROW_INDEX="9"/>
+      <VARIABLE ID="vga_peripheral_mem_0" ROW_INDEX="12"/>
     </SEQUENCES>
   </SET>
 

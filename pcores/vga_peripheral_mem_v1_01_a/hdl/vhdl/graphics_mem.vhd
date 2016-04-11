@@ -21,7 +21,8 @@ entity graphics_mem is
     MEM_SIZE       : natural := 4800
     );
   port(
-    clk_i     : in  std_logic;
+    clk_i     : in  std_logic; --rd_clk_i
+	 wr_clk_i  : in  std_logic;
     reset_n_i : in  std_logic;     
     wr_addr_i : in  std_logic_vector(MEM_ADDR_WIDTH-1 downto 0);     -- write address input
     rd_addr_i : in  std_logic_vector(MEM_ADDR_WIDTH-1 downto 0);     -- read address input
@@ -64,8 +65,8 @@ begin
                  '0'  & rd_addr_i(4-1 downto 0) when (MEM_DATA_WIDTH = 16) else
                       rd_addr_i(5-1 downto 0);
   
-  DP_GRAPHICS_MEM : process (clk_i) begin
-    if (rising_edge(clk_i)) then
+  DP_GRAPHICS_MEM : process (wr_clk_i) begin --wr_clk_i
+    if (rising_edge(wr_clk_i)) then
       if (we_i = '1') then
         graphics_mem(index_2) <= wr_data_i;
       end if;
@@ -73,14 +74,15 @@ begin
     end if;
   end process;
   
-  DP_GRAPHICS_MEM_RD : process (clk_i) begin
+  DP_GRAPHICS_MEM_RD : process (clk_i) begin  --rd_clk_i
     if (rising_edge(clk_i)) then
-      rd_value <= graphics_mem(conv_integer(index_0));
+       index_0_t <= conv_integer(mem_up_addr);
     end if;
   end process;
+  rd_value <= graphics_mem(conv_integer(index_0));
   rd_data_o <= rd_value(conv_integer(index_1));
   
-  index_0_t <= conv_integer(mem_up_addr);
+  
   index_0   <= index_0_t when (index_0_t < graphics_mem'length) else 0;
   
   index_1_t <= conv_integer(mem_lo_addr);

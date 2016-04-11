@@ -27,6 +27,7 @@ entity vga_top is
     );
   port (
     clk_i               : in  std_logic;
+	 wr_clk_i            : in  std_logic;
     reset_n_i           : in  std_logic;
     --
     direct_mode_i       : in  std_logic; -- 0 - text and graphics interface mode, 1 - direct mode (direct force RGB component)
@@ -120,6 +121,7 @@ architecture rtl of vga_top is
     );
   port(
     clk_i     : in  std_logic;
+	 wr_clk_i : in std_logic;
     reset_n_i : in  std_logic;
     --
     wr_addr_i : in  std_logic_vector(MEM_ADDR_WIDTH-1 downto 0);
@@ -138,6 +140,7 @@ architecture rtl of vga_top is
     );
   port(
     clk_i     : in  std_logic;
+	 wr_clk_i  : in  std_logic;
     reset_n_i : in  std_logic;
     --          
     wr_addr_i : in  std_logic_vector(MEM_ADDR_WIDTH-1 downto 0);
@@ -177,6 +180,8 @@ architecture rtl of vga_top is
   signal graph_pixel_addr_s     : std_logic_vector(GRAPH_MEM_ADDR_WIDTH-1 downto 0);
   signal graph_pixel_s          : std_logic;
   signal active_pixel_s         : std_logic;
+  
+  -- my signals
 
 begin
 
@@ -239,6 +244,7 @@ begin
   )
   port map(
     clk_i     => pix_clk_s,
+	 wr_clk_i => wr_clk_i,
     reset_n_i => vga_rst_n_s,
     --
     wr_addr_i => text_addr_i,
@@ -256,6 +262,7 @@ begin
   )
   port map(
     clk_i     => pix_clk_s,
+	 wr_clk_i  => wr_clk_i,
     reset_n_i => vga_rst_n_s,
     --
     wr_addr_i => graph_addr_i,
