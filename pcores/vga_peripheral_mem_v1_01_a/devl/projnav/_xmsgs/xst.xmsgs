@@ -5,5 +5,56 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="error" file="HDLCompiler" num="69" delta="old" >"C:\materija\RA151-2013\lab3\pcores\vga_peripheral_mem_v1_01_a\hdl\vhdl\user_logic.vhd" Line 371: &lt;<arg fmt="%s" index="1">vga_hsync_o</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="192" delta="old" >"C:\materija\RA151-2013\lab3\pcores\vga_peripheral_mem_v1_01_a\hdl\vhdl\user_logic.vhd" Line 371: Actual of formal <arg fmt="%s" index="1">out</arg> port <arg fmt="%s" index="2">vga_hsync_o</arg> cannot be an expression
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="old" >"C:\materija\RA151-2013\lab3\pcores\vga_peripheral_mem_v1_01_a\hdl\vhdl\user_logic.vhd" Line 372: &lt;<arg fmt="%s" index="1">vga_vsync_o</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="192" delta="old" >"C:\materija\RA151-2013\lab3\pcores\vga_peripheral_mem_v1_01_a\hdl\vhdl\user_logic.vhd" Line 372: Actual of formal <arg fmt="%s" index="1">out</arg> port <arg fmt="%s" index="2">vga_vsync_o</arg> cannot be an expression
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="old" >"C:\materija\RA151-2013\lab3\pcores\vga_peripheral_mem_v1_01_a\hdl\vhdl\user_logic.vhd" Line 373: &lt;<arg fmt="%s" index="1">blank_o</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="192" delta="old" >"C:\materija\RA151-2013\lab3\pcores\vga_peripheral_mem_v1_01_a\hdl\vhdl\user_logic.vhd" Line 373: Actual of formal <arg fmt="%s" index="1">out</arg> port <arg fmt="%s" index="2">blank_o</arg> cannot be an expression
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="old" >"C:\materija\RA151-2013\lab3\pcores\vga_peripheral_mem_v1_01_a\hdl\vhdl\user_logic.vhd" Line 376: &lt;<arg fmt="%s" index="1">psave_o</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="192" delta="old" >"C:\materija\RA151-2013\lab3\pcores\vga_peripheral_mem_v1_01_a\hdl\vhdl\user_logic.vhd" Line 376: Actual of formal <arg fmt="%s" index="1">out</arg> port <arg fmt="%s" index="2">psave_o</arg> cannot be an expression
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="old" >"C:\materija\RA151-2013\lab3\pcores\vga_peripheral_mem_v1_01_a\hdl\vhdl\user_logic.vhd" Line 377: &lt;<arg fmt="%s" index="1">sync_o</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="192" delta="old" >"C:\materija\RA151-2013\lab3\pcores\vga_peripheral_mem_v1_01_a\hdl\vhdl\user_logic.vhd" Line 377: Actual of formal <arg fmt="%s" index="1">out</arg> port <arg fmt="%s" index="2">sync_o</arg> cannot be an expression
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="old" >"C:\materija\RA151-2013\lab3\pcores\vga_peripheral_mem_v1_01_a\hdl\vhdl\user_logic.vhd" Line 378: &lt;<arg fmt="%s" index="1">red_o</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="192" delta="old" >"C:\materija\RA151-2013\lab3\pcores\vga_peripheral_mem_v1_01_a\hdl\vhdl\user_logic.vhd" Line 378: Actual of formal <arg fmt="%s" index="1">out</arg> port <arg fmt="%s" index="2">red_o</arg> cannot be an expression
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="old" >"C:\materija\RA151-2013\lab3\pcores\vga_peripheral_mem_v1_01_a\hdl\vhdl\user_logic.vhd" Line 379: &lt;<arg fmt="%s" index="1">green_o</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="192" delta="old" >"C:\materija\RA151-2013\lab3\pcores\vga_peripheral_mem_v1_01_a\hdl\vhdl\user_logic.vhd" Line 379: Actual of formal <arg fmt="%s" index="1">out</arg> port <arg fmt="%s" index="2">green_o</arg> cannot be an expression
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="old" >"C:\materija\RA151-2013\lab3\pcores\vga_peripheral_mem_v1_01_a\hdl\vhdl\user_logic.vhd" Line 380: &lt;<arg fmt="%s" index="1">blue_o</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="192" delta="old" >"C:\materija\RA151-2013\lab3\pcores\vga_peripheral_mem_v1_01_a\hdl\vhdl\user_logic.vhd" Line 380: Actual of formal <arg fmt="%s" index="1">out</arg> port <arg fmt="%s" index="2">blue_o</arg> cannot be an expression
+</msg>
+
+<msg type="error" file="HDLCompiler" num="854" delta="old" >"C:\materija\RA151-2013\lab3\pcores\vga_peripheral_mem_v1_01_a\hdl\vhdl\user_logic.vhd" Line 139: Unit &lt;<arg fmt="%s" index="1">imp</arg>&gt; ignored due to previous errors.
+</msg>
+
 </messages>
 

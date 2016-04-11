@@ -93,6 +93,9 @@ entity user_logic is
 
     -- DO NOT EDIT BELOW THIS LINE ---------------------
     -- Bus protocol parameters, do not add to or delete
+	 RES_TYPE : natural :=1;
+	 TEXT_MEM_DATA_WIDTH : natural := 6;
+	 GRAPH_MEM_DATA_WIDTH : natural := 32;
     C_NUM_REG                      : integer              := 32;
     C_SLV_DWIDTH                   : integer              := 32
     -- DO NOT EDIT ABOVE THIS LINE ---------------------
@@ -338,9 +341,9 @@ begin
     MEM_SIZE             => MEM_SIZE
   )
   port map(
-    clk_i              => clk_i,
+    clk_i              => Bus2IP_Clk,
 	 wr_clk_i => Bus2IP_Clk,
-    reset_n_i          => reset_n_i,
+    reset_n_i          => Bus2IP_Resetn,
     --
     direct_mode_i      => direct_mode,
     dir_red_i          => dir_red,
@@ -701,7 +704,7 @@ begin
   if(rising_edge(Bus2IP_Clk)) then
 	if(reg_we = '1') then
 		case unit_address is
-		when x"00000000" => direct_mode <= unit_data(0);
+		when (others => '0') => direct_mode <= unit_data(0);
 		when x"00000001" => display_mode <= unit_data(1 downto 0);
 		
 		end case;
